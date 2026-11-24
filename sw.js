@@ -1,15 +1,14 @@
-const CACHE_NAME = "fragments-v1";
+const CACHE_NAME = "fragments-v1.1";
 
 const urlsToCache = [
   "/",
   "/index.html",
   "/styles.css",
-  "/links/comics.html",
-  "/links/conceptart.html",
+  "/links/projects.html",
+  "/links/library.html",
   "/links/team.html"
 ];
 
-// instalar
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
@@ -18,7 +17,6 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// responder con cache
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then(response => {
