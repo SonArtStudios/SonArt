@@ -1,4 +1,4 @@
-const CACHE_NAME = "fragments-v1.1";
+const CACHE_NAME = "SoñArt-v1.1";
 
 const urlsToCache = [
   "/",
